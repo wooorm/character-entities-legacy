@@ -1,0 +1,22 @@
+{
+  "name": "character-entities-legacy",
+  "version": "0.0.0",
+  "description": "HTML legacy character entity information",
+  "license": "MIT",
+  "keywords": [
+    "html",
+    "entity",
+    "entities",
+    "character",
+    "reference",
+    "name",
+    "replacement"
+  ],
+  "repository": "wooorm/character-entities-legacy",
+  "json": [
+    "index.json"
+  ],
+  "scripts": [
+    "index.js"
+  ]
+}
