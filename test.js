@@ -8,23 +8,15 @@
 
 'use strict';
 
-/* eslint-env node */
-
-/*
- * Dependencies.
- */
-
+/* Dependencies. */
 var test = require('tape');
-var characterEntitiesLegacy = require('./');
+var characterEntities = require('./');
 
-/*
- * Tests.
- */
+/* Tests. */
+test('characterEntities', function (t) {
+  t.equal(characterEntities.copy, '©');
+  t.equal(characterEntities.frac34, '¾');
+  t.equal(characterEntities.sup1, '¹');
 
-test('characterEntitiesLegacy', function (t) {
-    t.equal(characterEntitiesLegacy.copy, '©');
-    t.equal(characterEntitiesLegacy.frac34, '¾');
-    t.equal(characterEntitiesLegacy.sup1, '¹');
-
-    t.end();
+  t.end();
 });

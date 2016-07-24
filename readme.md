@@ -1,21 +1,16 @@
-# character-entities-legacy [![Build Status](https://img.shields.io/travis/wooorm/character-entities-legacy.svg?style=flat)](https://travis-ci.org/wooorm/character-entities-legacy) [![Coverage Status](https://img.shields.io/codecov/c/github/wooorm/character-entities-legacy.svg)](https://codecov.io/github/wooorm/character-entities-legacy)
+# character-entities-legacy [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
 
-HTML legacy character entity information: for legacy reasons some character
-entities are not required to have a trailing semicolon: `&copy` is perfectly
-okay for `©`.
+HTML legacy character entity information: for legacy reasons some
+character entities are not required to have a trailing semicolon:
+`&copy` is perfectly okay for `©`.
 
 ## Installation
 
-[npm](https://docs.npmjs.com/cli/install):
+[npm][npm-install]:
 
 ```bash
 npm install character-entities-legacy
 ```
-
-**character-entities-legacy** is also available for
-[bower](http://bower.io/#install-packages), [duo](http://duojs.org/#getting-started),
-and for AMD, CommonJS, and globals ([uncompressed](character-entities-legacy.js) and
-[compressed](character-entities-legacy.min.js)).
 
 ## Usage
 
@@ -27,14 +22,33 @@ console.log(characterEntitiesLegacy.sup1); // ¹
 
 ## API
 
-### characterEntitiesLegacy
+### `characterEntitiesLegacy`
 
-Mapping between (case-sensitive) legacy character entity names to replacements.
+Mapping between (case-sensitive) legacy character entity names to
+replacements.
 
 ## Support
 
-See [whatwg/html](https://raw.githubusercontent.com/whatwg/html/master/json-entities-legacy.inc).
+See [whatwg/html][html].
 
 ## License
 
-[MIT](LICENSE) © [Titus Wormer](http://wooorm.com)
+[MIT][license] © [Titus Wormer][author]
+
+<!-- Definitions -->
+
+[travis-badge]: https://img.shields.io/travis/wooorm/character-entities-legacy.svg
+
+[travis]: https://travis-ci.org/wooorm/character-entities-legacy
+
+[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/character-entities-legacy.svg
+
+[codecov]: https://codecov.io/github/wooorm/character-entities-legacy
+
+[npm-install]: https://docs.npmjs.com/cli/install
+
+[license]: LICENSE
+
+[author]: http://wooorm.com
+
+[html]: https://raw.githubusercontent.com/whatwg/html/master/json-entities-legacy.inc
