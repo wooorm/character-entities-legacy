@@ -26,12 +26,9 @@
   "devDependencies": {
     "browserify": "^13.0.1",
     "esmangle": "^1.0.1",
-    "nyc": "^7.0.0",
-    "remark-cli": "^1.0.0",
-    "remark-comment-config": "^4.0.0",
-    "remark-github": "^5.0.0",
-    "remark-lint": "^4.0.0",
-    "remark-validate-links": "^4.0.0",
+    "nyc": "^8.0.0",
+    "remark-cli": "^2.0.0",
+    "remark-preset-wooorm": "^1.0.0",
     "tape": "^4.0.0",
     "xo": "^0.16.0"
   },
@@ -39,7 +36,7 @@
     "build-md": "remark . --quiet --frail",
     "build-crawl": "mkdir -p data; curl https://raw.githubusercontent.com/whatwg/html/cb8445520f10e044d23cfd3ff7fc38e064edf1f1/json-entities-legacy.inc > data/entities.json",
     "build-generate": "node script/generate.js",
-    "build-bundle": "browserify index.js --bare -s characterEntitiesHTML4 > character-entities-legacy.js",
+    "build-bundle": "browserify index.js --bare -s characterEntitiesLegacy > character-entities-legacy.js",
     "build-mangle": "esmangle character-entities-legacy.js > character-entities-legacy.min.js",
     "build": "npm run build-md && npm run build-crawl && npm run build-generate && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
@@ -53,20 +50,11 @@
       "guard-for-in": "off"
     },
     "ignores": [
-      "character-entities-legacy.js",
-      "character-entities-legacy.min.js"
+      "character-entities-legacy.js"
     ]
   },
   "remarkConfig": {
     "output": true,
-    "plugins": [
-      "comment-config",
-      "github",
-      "lint",
-      "validate-links"
-    ],
-    "settings": {
-      "bullet": "*"
-    }
+    "presets": "wooorm"
   }
 }
