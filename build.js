@@ -1,11 +1,3 @@
-/**
- * @author Titus Wormer
- * @copyright 2015 Titus Wormer
- * @license MIT
- * @module character-entities-legacy:script
- * @fileoverview Generate a dictionary of legacy entity names to replacements.
- */
-
 'use strict';
 
 /* Dependencies. */
