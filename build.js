@@ -1,25 +1,28 @@
 'use strict';
 
-/* Dependencies. */
 var fs = require('fs');
+var https = require('https');
 var path = require('path');
+var bail = require('bail');
+var concat = require('concat-stream');
 
-/* Read. */
-var data = fs.readFileSync(path.join(__dirname, 'data', 'entities.json'), 'utf8');
+var url = 'https://raw.githubusercontent.com/whatwg/html/cb8445520f10e044d23cfd3ff7fc38e064edf1f1/json-entities-legacy.inc';
 
-data = data.slice(0, -2); // Remove trailing comma.
+https.get(url, function (res) {
+  res
+    .pipe(concat(function (data) {
+      var entities = {};
 
-data = JSON.parse('{' + data + '}');
+      data = data.slice(0, -2); // Remove trailing comma.
+      data = JSON.parse('{' + data + '}');
 
-/* Transform. */
-var entities = {};
-var key;
+      Object.keys(data).forEach(function (key) {
+        entities[key.slice(1)] = data[key].characters;
+      });
 
-for (key in data) {
-  entities[key.slice(1)] = data[key].characters;
-}
+      data = JSON.stringify(entities, 0, 2);
 
-/* Write. */
-entities = JSON.stringify(entities, 0, 2) + '\n';
-
-fs.writeFileSync(path.join(__dirname, '..', 'index.json'), entities);
+      fs.writeFile(path.join(__dirname, '..', 'index.json'), data + '\n', bail);
+    }))
+    .on('error', bail);
+});
