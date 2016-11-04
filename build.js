@@ -2,7 +2,6 @@
 
 var fs = require('fs');
 var https = require('https');
-var path = require('path');
 var bail = require('bail');
 var concat = require('concat-stream');
 
@@ -22,7 +21,7 @@ https.get(url, function (res) {
 
       data = JSON.stringify(entities, 0, 2);
 
-      fs.writeFile(path.join(__dirname, '..', 'index.json'), data + '\n', bail);
+      fs.writeFile('index.json', data + '\n', bail);
     }))
     .on('error', bail);
 });
