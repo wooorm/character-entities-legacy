@@ -13,7 +13,7 @@ var fs = require('fs');
 var path = require('path');
 
 /* Read. */
-var data = fs.readFileSync(path.join(__dirname, '..', 'data', 'entities.json'), 'utf8');
+var data = fs.readFileSync(path.join(__dirname, 'data', 'entities.json'), 'utf8');
 
 data = data.slice(0, -2); // Remove trailing comma.
 

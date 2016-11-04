@@ -35,7 +35,7 @@
   "scripts": {
     "build-md": "remark . --quiet --frail",
     "build-crawl": "mkdir -p data; curl https://raw.githubusercontent.com/whatwg/html/cb8445520f10e044d23cfd3ff7fc38e064edf1f1/json-entities-legacy.inc > data/entities.json",
-    "build-generate": "node script/generate.js",
+    "build-generate": "node build",
     "build-bundle": "browserify index.json --bare -s characterEntitiesLegacy > character-entities-legacy.js",
     "build-mangle": "esmangle character-entities-legacy.js > character-entities-legacy.min.js",
     "build": "npm run build-md && npm run build-crawl && npm run build-generate && npm run build-bundle && npm run build-mangle",
