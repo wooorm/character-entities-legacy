@@ -6,7 +6,7 @@ character entities are not required to have a trailing semicolon:
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install character-entities-legacy
@@ -15,9 +15,9 @@ npm install character-entities-legacy
 ## Usage
 
 ```js
-console.log(characterEntitiesLegacy.copy); // ©
-console.log(characterEntitiesLegacy.frac34); // ¾
-console.log(characterEntitiesLegacy.sup1); // ¹
+console.log(characterEntitiesLegacy.copy); //=> '©'
+console.log(characterEntitiesLegacy.frac34); //=> '¾'
+console.log(characterEntitiesLegacy.sup1); //=> '¹'
 ```
 
 ## API
@@ -41,7 +41,7 @@ See [whatwg/html][html].
 
 [travis]: https://travis-ci.org/wooorm/character-entities-legacy
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
