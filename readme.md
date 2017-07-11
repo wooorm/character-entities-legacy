@@ -1,4 +1,4 @@
-# character-entities-legacy [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# character-entities-legacy [![Build Status][travis-badge]][travis]
 
 HTML legacy character entity information: for legacy reasons some
 character entities are not required to have a trailing semicolon:
@@ -40,10 +40,6 @@ See [whatwg/html][html].
 [travis-badge]: https://img.shields.io/travis/wooorm/character-entities-legacy.svg
 
 [travis]: https://travis-ci.org/wooorm/character-entities-legacy
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/character-entities-legacy.svg
-
-[codecov]: https://codecov.io/github/wooorm/character-entities-legacy
 
 [npm-install]: https://docs.npmjs.com/cli/install
 

@@ -1,7 +1,5 @@
 .DS_Store
 *.log
-.nyc_output/
-coverage/
 node_modules/
 character-entities-legacy.js
 character-entities-legacy.min.js
