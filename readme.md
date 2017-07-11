@@ -31,6 +31,17 @@ replacements.
 
 See [whatwg/html][html].
 
+## Related
+
+*   [`character-entities`](https://github.com/wooorm/character-entities)
+    — HTML character entity info
+*   [`character-entities-html4`](https://github.com/wooorm/character-entities-html4)
+    — HTML 4 character entity info
+*   [`parse-entities`](https://github.com/wooorm/parse-entities)
+    — Parse HTML character references
+*   [`stringify-entities`](https://github.com/wooorm/stringify-entities)
+    — Stringify HTML character references
+
 ## License
 
 [MIT][license] © [Titus Wormer][author]
