@@ -3,3 +3,4 @@
 node_modules/
 character-entities-legacy.js
 character-entities-legacy.min.js
+yarn.lock
