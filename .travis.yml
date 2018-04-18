@@ -3,19 +3,12 @@ node_js:
 - '4.0'
 - '8.0'
 deploy:
-  - provider: npm
-    email: tituswormer@gmail.com
-    api_key:
-      secure: ipVsMAGr41X58rbaIHGSYqleYHGXTpMuLROiw2IxSyu+JBqrarH5RbWW7cloVfVpsS8kd0zmV8indpqulwy8hm8n4neWd/uIf1z8NM1tPYEZsDKzblUkmmMfv7da2YoYWYJtaDL4uzuDaom3JP1tlYkffg0igj4BTBj5qY9Jd6jLoIscwxvSKu3iecKsXkMbX3/1WPu35EtDfDSVvmxBsL+YgKmJQNi3UUA/GjITBRDJ94d3oDcNHGF2dzt5J7pnfzhYOT39uXBtTx8pEVS18jYVW0rfGEgzg2jy9Twf5AOYXn4E1j37G75ZvbQX4qhmarfTVwW/bKmovfmeI3hng+UnAF8RIzfCEMQ2TnKongbJYOZUqq2THy70KQO3nf8PlZyYCHOucxMFEndAFWaUNIAmjoE2sEjEi5fiAB4z7E+MnCLNLnmQ+3T+YtVhGHpfesIUsbnnoXMg+r6FIOkmWRa+bzCtqosNnjbf4cWj/7IT3TWWTyNAAVy3yWSVPMWKbPZS0W760HJq+VlSoEwkCzHgEIs7kjzFf6ZnlivBOw0hfJMfid4tBTvJmvHBGmHH/mgk375lgwAiu5Dqo+iTadIpmXy9I8MdZVKANID7v41M2LcMypLMzfLFZ+/Z2nDDS/Ie5YqkiMrzJGAg3JZEUvjrMZ0hAgBB+/eteNox+kk=
-    on:
-      tags: true
-      node: '4.0'
-  - provider: releases
-    api_key:
-      secure: MeOE27RPh4hG1qfAH0Csdrk241E33b5D69DcrpF5wcJNsK3OCxXKR1Yf/yPhuhbjkwms0K1yVmzM5y9UwIuPm/1BzmsoM/Y26oNJQ9i+j3VmWp00qr0BaEhUtnzBL/Cqso8ca//FiG3a7TNkmZ56h6gfFBMmvQYJ6D3tknEejFJECZl1eLZwvPgHiT+ku6HXDJxpGWK8QJXmdR3qfhar7tl67rRvu33fdGVJ+qnjkffxEnCbW5wUnCWRpwupeamJykS/ZAV8c4SqAvSB7P8JckQImUWvqdkWjHbeq1fgjMr4x70iY2gsb+ltX3i8DEWag8eWZLr60uyriRebsa4bZ2IGIZSqQyTLE7t3oLh/ebpyIRlzauGz4ZTi7ovdkCGO4Ui4ZOvtyioFx+qMbB5hIm0Xbw5FsPY9geGKkCZ8w6yVRg07fMNIESNbbcrga6vKHn71wZ4vH75ydq7pBtCLYEjNfZO1S97amqzpF6vs+Ve9ikNWEeQuBJDsqYzXIsbIRfCdbiTPcTnh9qDa7g+VKrnTbju1EiOeEvE0MG/F9yBU6CE952LBI3EcAK7Z/U1bit5YgIMbb1KVyFyX5Z6nJrWqDQGsJ6/C9BpcFvUFBlm/ZBmuueEBuxTj9cNG8+ORDCevQDcROfvZh98WtSGmD+gXmBt2AqA5CPe2AgYJa4M=
-    file:
-      - "character-entities-legacy.js"
-      - "character-entities-legacy.min.js"
-    on:
-      tags: true
-      node: '8.0'
+  provider: releases
+  api_key:
+    secure: MeOE27RPh4hG1qfAH0Csdrk241E33b5D69DcrpF5wcJNsK3OCxXKR1Yf/yPhuhbjkwms0K1yVmzM5y9UwIuPm/1BzmsoM/Y26oNJQ9i+j3VmWp00qr0BaEhUtnzBL/Cqso8ca//FiG3a7TNkmZ56h6gfFBMmvQYJ6D3tknEejFJECZl1eLZwvPgHiT+ku6HXDJxpGWK8QJXmdR3qfhar7tl67rRvu33fdGVJ+qnjkffxEnCbW5wUnCWRpwupeamJykS/ZAV8c4SqAvSB7P8JckQImUWvqdkWjHbeq1fgjMr4x70iY2gsb+ltX3i8DEWag8eWZLr60uyriRebsa4bZ2IGIZSqQyTLE7t3oLh/ebpyIRlzauGz4ZTi7ovdkCGO4Ui4ZOvtyioFx+qMbB5hIm0Xbw5FsPY9geGKkCZ8w6yVRg07fMNIESNbbcrga6vKHn71wZ4vH75ydq7pBtCLYEjNfZO1S97amqzpF6vs+Ve9ikNWEeQuBJDsqYzXIsbIRfCdbiTPcTnh9qDa7g+VKrnTbju1EiOeEvE0MG/F9yBU6CE952LBI3EcAK7Z/U1bit5YgIMbb1KVyFyX5Z6nJrWqDQGsJ6/C9BpcFvUFBlm/ZBmuueEBuxTj9cNG8+ORDCevQDcROfvZh98WtSGmD+gXmBt2AqA5CPe2AgYJa4M=
+  file:
+    - "character-entities-legacy.js"
+    - "character-entities-legacy.min.js"
+  on:
+    tags: true
+    node: '8.0'
