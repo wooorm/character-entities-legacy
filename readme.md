@@ -58,6 +58,6 @@ See [whatwg/html][html].
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
 [html]: https://raw.githubusercontent.com/whatwg/html/master/json-entities-legacy.inc
