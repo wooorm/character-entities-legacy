@@ -14,6 +14,10 @@
   ],
   "repository": "wooorm/character-entities-legacy",
   "bugs": "https://github.com/wooorm/character-entities-legacy/issues",
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/wooorm"
+  },
   "author": "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (https://wooorm.com)"
