@@ -71,4 +71,4 @@ See [`whatwg/html`][html].
 
 [author]: https://wooorm.com
 
-[html]: https://raw.githubusercontent.com/whatwg/html/master/json-entities-legacy.inc
+[html]: https://github.com/whatwg/html-build/blob/HEAD/entities/json-entities-legacy.inc

@@ -6,7 +6,7 @@ var bail = require('bail')
 var concat = require('concat-stream')
 
 https.get(
-  'https://raw.githubusercontent.com/whatwg/html/cb84455/json-entities-legacy.inc',
+  'https://raw.githubusercontent.com/whatwg/html-build/HEAD/entities/json-entities-legacy.inc',
   onconnection
 )
 
