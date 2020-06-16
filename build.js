@@ -10,8 +10,8 @@ https.get(
   onconnection
 )
 
-function onconnection(res) {
-  res.pipe(concat(onconcat)).on('error', bail)
+function onconnection(response) {
+  response.pipe(concat(onconcat)).on('error', bail)
 }
 
 function onconcat(data) {
@@ -20,7 +20,7 @@ function onconcat(data) {
   data = data.slice(0, -2) // Remove trailing comma.
   data = JSON.parse('{' + data + '}')
 
-  Object.keys(data).forEach(function(key) {
+  Object.keys(data).forEach(function (key) {
     entities[key.slice(1)] = data[key].characters
   })
 
