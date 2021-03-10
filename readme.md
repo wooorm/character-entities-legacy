@@ -1,6 +1,7 @@
 # character-entities-legacy
 
 [![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
@@ -53,9 +54,13 @@ See [`whatwg/html`][html].
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/wooorm/character-entities-legacy.svg
+[build-badge]: https://github.com/wooorm/character-entities-legacy/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/wooorm/character-entities-legacy
+[build]: https://github.com/wooorm/character-entities-legacy/actions
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/wooorm/character-entities-legacy.svg
+
+[coverage]: https://codecov.io/github/wooorm/character-entities-legacy
 
 [downloads-badge]: https://img.shields.io/npm/dm/character-entities-legacy.svg
 
