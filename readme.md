@@ -11,6 +11,9 @@ okay for `©`.
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -20,7 +23,7 @@ npm install character-entities-legacy
 ## Use
 
 ```js
-var characterEntitiesLegacy = require('character-entities-legacy')
+import {characterEntitiesLegacy} from 'character-entities-legacy'
 
 console.log(characterEntitiesLegacy.copy) // => '©'
 console.log(characterEntitiesLegacy.frac34) // => '¾'
@@ -28,6 +31,9 @@ console.log(characterEntitiesLegacy.sup1) // => '¹'
 ```
 
 ## API
+
+This package exports the following identifiers: `characterEntitiesLegacy`.
+There is no default export.
 
 ### `characterEntitiesLegacy`
 

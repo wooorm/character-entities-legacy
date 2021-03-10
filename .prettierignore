@@ -1,4 +1,2 @@
-character-entities-legacy.js
-character-entities-legacy.min.js
-*.json
+coverage/
 *.md
