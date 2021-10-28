@@ -1,3 +1,8 @@
+/**
+ * HTML legacy character entity information.
+ *
+ * @type {Record<string, string>}
+ */
 export const characterEntitiesLegacy = {
   AElig: 'Æ',
   AMP: '&',

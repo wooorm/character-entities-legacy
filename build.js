@@ -7,20 +7,24 @@ const own = {}.hasOwnProperty
 
 https.get(
   'https://raw.githubusercontent.com/whatwg/html-build/HEAD/entities/json-entities-legacy.inc',
-  onconnection
+  (response) => {
+    response.pipe(concatStream(onconcat)).on('error', bail)
+  }
 )
 
-function onconnection(response) {
-  response.pipe(concatStream(onconcat)).on('error', bail)
-}
-
-function onconcat(data) {
+/**
+ * @param {Buffer} buf
+ */
+function onconcat(buf) {
+  /** @type {Record<string, string>} */
   const entities = {}
+  /** @type {Record<string, {codepoints: number[], characters: string}>} */
   const values = JSON.parse(
     '{' +
-      data.slice(0, -2) + // Remove trailing comma.
+      String(buf).slice(0, -2) + // Remove trailing comma.
       '}'
   )
+  /** @type {string} */
   let key
 
   for (key in values) {
@@ -31,9 +35,16 @@ function onconcat(data) {
 
   fs.writeFile(
     'index.js',
-    'export const characterEntitiesLegacy = ' +
-      JSON.stringify(entities, null, 2) +
-      '\n',
+    [
+      '/**',
+      ' * HTML legacy character entity information.',
+      ' *',
+      ' * @type {Record<string, string>}',
+      ' */',
+      'export const characterEntitiesLegacy = ' +
+        JSON.stringify(entities, null, 2),
+      ''
+    ].join('\n'),
     bail
   )
 }
