@@ -1,4 +1,4 @@
-export var characterEntitiesLegacy = {
+export const characterEntitiesLegacy = {
   AElig: 'Æ',
   AMP: '&',
   Aacute: 'Á',

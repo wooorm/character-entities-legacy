@@ -1,9 +1,9 @@
-import fs from 'fs'
-import https from 'https'
-import bail from 'bail'
-import concat from 'concat-stream'
+import fs from 'node:fs'
+import https from 'node:https'
+import {bail} from 'bail'
+import concatStream from 'concat-stream'
 
-var own = {}.hasOwnProperty
+const own = {}.hasOwnProperty
 
 https.get(
   'https://raw.githubusercontent.com/whatwg/html-build/HEAD/entities/json-entities-legacy.inc',
@@ -11,17 +11,17 @@ https.get(
 )
 
 function onconnection(response) {
-  response.pipe(concat(onconcat)).on('error', bail)
+  response.pipe(concatStream(onconcat)).on('error', bail)
 }
 
 function onconcat(data) {
-  var entities = {}
-  var values = JSON.parse(
+  const entities = {}
+  const values = JSON.parse(
     '{' +
       data.slice(0, -2) + // Remove trailing comma.
       '}'
   )
-  var key
+  let key
 
   for (key in values) {
     if (own.call(values, key)) {
@@ -31,7 +31,7 @@ function onconcat(data) {
 
   fs.writeFile(
     'index.js',
-    'export var characterEntitiesLegacy = ' +
+    'export const characterEntitiesLegacy = ' +
       JSON.stringify(entities, null, 2) +
       '\n',
     bail
