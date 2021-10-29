@@ -1,6 +1,6 @@
 {
   "name": "character-entities-legacy",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "List of legacy HTML named character references that don’t need a trailing semicolon",
   "license": "MIT",
   "keywords": [
