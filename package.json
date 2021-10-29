@@ -1,7 +1,7 @@
 {
   "name": "character-entities-legacy",
   "version": "2.0.0",
-  "description": "Map of legacy HTML named character references that don’t need a trailing semicolon",
+  "description": "List of legacy HTML named character references that don’t need a trailing semicolon",
   "license": "MIT",
   "keywords": [
     "html",
@@ -9,8 +9,7 @@
     "entities",
     "character",
     "reference",
-    "name",
-    "replacement"
+    "name"
   ],
   "repository": "wooorm/character-entities-legacy",
   "bugs": "https://github.com/wooorm/character-entities-legacy/issues",

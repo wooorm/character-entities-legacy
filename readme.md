@@ -5,7 +5,7 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-Map of legacy HTML named character references that don’t need a trailing
+List of legacy HTML named character references that don’t need a trailing
 semicolon.
 
 ## Contents
@@ -25,8 +25,8 @@ semicolon.
 
 ## What is this?
 
-This is a map of certain named character references, that due to legacy reasons,
-don’t need a trailing semicolon in HTML.
+This is a list of certain named character references, that due to legacy
+reasons, don’t need a trailing semicolon in HTML.
 For example, `&copy` is perfectly fine for `©`!
 
 ## When should I use this?
@@ -76,8 +76,9 @@ There is no default export.
 
 ### `characterEntitiesLegacy`
 
-Mapping between (case sensitive) legacy character entity names to replacements.
-See [`whatwg/html`][html].
+List of (case sensitive) legacy character entity names.
+[`wooorm/character-entities`][character-entities] holds their decoded values.
+See [`whatwg/html`][html] for more info.
 
 ## Types
 
@@ -152,3 +153,5 @@ See [How to Contribute to Open Source][contribute].
 [parse-entities]: https://github.com/wooorm/parse-entities
 
 [stringify-entities]: https://github.com/wooorm/stringify-entities
+
+[character-entities]: https://github.com/wooorm/character-entities

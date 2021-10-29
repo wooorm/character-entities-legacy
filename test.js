@@ -2,9 +2,9 @@ import test from 'tape'
 import {characterEntitiesLegacy} from './index.js'
 
 test('characterEntitiesLegacy', function (t) {
-  t.equal(characterEntitiesLegacy.copy, '©')
-  t.equal(characterEntitiesLegacy.frac34, '¾')
-  t.equal(characterEntitiesLegacy.sup1, '¹')
+  t.ok(characterEntitiesLegacy.includes('copy'))
+  t.ok(characterEntitiesLegacy.includes('frac34'))
+  t.ok(characterEntitiesLegacy.includes('sup1'))
 
   t.end()
 })

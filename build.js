@@ -16,8 +16,8 @@ https.get(
  * @param {Buffer} buf
  */
 function onconcat(buf) {
-  /** @type {Record<string, string>} */
-  const entities = {}
+  /** @type {string[]} */
+  const entities = []
   /** @type {Record<string, {codepoints: number[], characters: string}>} */
   const values = JSON.parse(
     '{' +
@@ -29,7 +29,7 @@ function onconcat(buf) {
 
   for (key in values) {
     if (own.call(values, key)) {
-      entities[key.slice(1)] = values[key].characters
+      entities.push(key.slice(1))
     }
   }
 
@@ -37,12 +37,12 @@ function onconcat(buf) {
     'index.js',
     [
       '/**',
-      ' * Map of legacy HTML named character references that don’t need a trailing semicolon.',
+      ' * List of legacy HTML named character references that don’t need a trailing semicolon.',
       ' *',
-      ' * @type {Record<string, string>}',
+      ' * @type {Array<string>}',
       ' */',
       'export const characterEntitiesLegacy = ' +
-        JSON.stringify(entities, null, 2),
+        JSON.stringify(entities.sort(), null, 2),
       ''
     ].join('\n'),
     bail
