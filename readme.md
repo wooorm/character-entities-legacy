@@ -64,9 +64,9 @@ In browsers with [Skypack][]:
 ```js
 import {characterEntitiesLegacy} from 'character-entities-legacy'
 
-console.log(characterEntitiesLegacy.copy) // => '©'
-console.log(characterEntitiesLegacy.frac34) // => '¾'
-console.log(characterEntitiesLegacy.sup1) // => '¹'
+console.log(characterEntitiesLegacy.includes('copy')) // => true
+console.log(characterEntitiesLegacy.includes('frac34')) // => true
+console.log(characterEntitiesLegacy.includes('sup1')) // => true
 ```
 
 ## API
