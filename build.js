@@ -37,7 +37,7 @@ function onconcat(buf) {
     'index.js',
     [
       '/**',
-      ' * HTML legacy character entity information.',
+      ' * Map of legacy HTML named character references that don’t need a trailing semicolon.',
       ' *',
       ' * @type {Record<string, string>}',
       ' */',
