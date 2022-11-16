@@ -1,10 +1,9 @@
-import test from 'tape'
+import assert from 'node:assert/strict'
+import test from 'node:test'
 import {characterEntitiesLegacy} from './index.js'
 
-test('characterEntitiesLegacy', function (t) {
-  t.ok(characterEntitiesLegacy.includes('copy'))
-  t.ok(characterEntitiesLegacy.includes('frac34'))
-  t.ok(characterEntitiesLegacy.includes('sup1'))
-
-  t.end()
+test('characterEntitiesLegacy', function () {
+  assert.ok(characterEntitiesLegacy.includes('copy'))
+  assert.ok(characterEntitiesLegacy.includes('frac34'))
+  assert.ok(characterEntitiesLegacy.includes('sup1'))
 })
